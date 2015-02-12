@@ -21,6 +21,9 @@ import java.util.List;
 import java.util.Random;
 import java.security.Timestamp;
 import javax.net.ssl.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 
 public class SignTest {
 
@@ -75,7 +78,8 @@ public class SignTest {
             if (!paramStr.isEmpty()) {
                 paramStr += '&';
             }
-            paramStr += key + '=' + requestParams.get(key).toString();
+            // paramStr += key + '=' + requestParams.get(key).toString();
+            paramStr += key + '=' + URLEncoder.encode(requestParams.get(key).toString());
         }
 
         try {
