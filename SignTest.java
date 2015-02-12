@@ -28,10 +28,8 @@ import java.net.URLEncoder;
 public class SignTest {
 
     // SecretId 和 SecretKey
-    // private static final String SECRET_ID = "YOUR_SECRET_ID";
-    // private static final String SECRET_KEY = "YOUR_SECRET_KEY";
-    private static final String SECRET_ID = "AKIDUxKpVBeAHP2vk1sjTrHQPTTttPZBmJns";
-    private static final String SECRET_KEY = "9THbdnYeaLIC7QTx2kAu6980qwZJrtEh";
+    private static final String SECRET_ID = "YOUR_SECRET_ID";
+    private static final String SECRET_KEY = "YOUR_SECRET_KEY";
 
     public static void main(String[] args) {
 
