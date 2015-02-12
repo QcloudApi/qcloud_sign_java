@@ -21,12 +21,17 @@ import java.util.List;
 import java.util.Random;
 import java.security.Timestamp;
 import javax.net.ssl.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 
 public class SignTest {
 
     // SecretId 和 SecretKey
-    private static final String SECRET_ID = "YOUR_SECRET_ID";
-    private static final String SECRET_KEY = "YOUR_SECRET_KEY";
+    // private static final String SECRET_ID = "YOUR_SECRET_ID";
+    // private static final String SECRET_KEY = "YOUR_SECRET_KEY";
+    private static final String SECRET_ID = "AKIDUxKpVBeAHP2vk1sjTrHQPTTttPZBmJns";
+    private static final String SECRET_KEY = "9THbdnYeaLIC7QTx2kAu6980qwZJrtEh";
 
     public static void main(String[] args) {
 
@@ -75,7 +80,8 @@ public class SignTest {
             if (!paramStr.isEmpty()) {
                 paramStr += '&';
             }
-            paramStr += key + '=' + requestParams.get(key).toString();
+            // paramStr += key + '=' + requestParams.get(key).toString();
+            paramStr += key + '=' + URLEncoder.encode(requestParams.get(key).toString());
         }
 
         try {
